@@ -12,14 +12,15 @@ import {
 
 function App() {
   return (
-    <Router>
+    <Router basename={window.location.pathname || ""}>
         <Routes>
             <Route path="/" element={<Homepage/>}/>
             <Route path="/Prior" element={<Priority/>}/>
             <Route path="/Final" element={<Final/>}/>
             <Route path="/About" element={<About/>}/>
         </Routes>
-    </Router>
+      </Router>
+    
   );
 }
 
